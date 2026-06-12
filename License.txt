@@ -1,0 +1,34 @@
+DISCLAIMER AND LICENSE AGREEMENT 
+=================================
+SOFTWARE NAME: Erfcx_RK
+
+Disclaimer of Warranty:
+================
+The software is provided "as is", without warranty of any kind, express or implied. In no event shall the author be liable for any claim, damages, or other liability,
+whether in an action of contract, tort, or otherwise, arising from, out of, or in connection with the software or the use or other dealings in the software.
+
+
+Usage Rights and Restrictions:
+====================
+This package is provided for non-commercial use only. Commercial use is strictly prohibited without prior written consent from the authors.
+Any published work or presentation using this package must include a citation to the original paper:
+Zaghloul, M. R., “Efficient  multi-precision computation of thr scaled complementary error function and the Dawson integral”
+Numerical Algorithms (2024) https://doi.org/10.1007/s11075-023-01608-8 
+
+
+License:
+=====
+Permission is hereby granted to use this software for non-commercial research and educational purposes. 
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+- Redistributions of source code must retain the above copyright notice, this list of conditions, and the following disclaimer.
+- Redistributions in binary form must reproduce the above copyright notice, this list of conditions, and the following disclaimer
+in the documentation and/or other materials provided with the distribution.
+- Neither the name of the authors nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+- Any derivative works or modifications to this package must be clearly identified as such and may not be misrepresented as the original software.
+
+Acknowledgment:
+============
+- If you use this software in a publication or presentation, please include an acknowledgment of the authors' work in your paper or presentation.
+
+By using this software, you agree to the terms and conditions outlined above.
