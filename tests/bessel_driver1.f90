@@ -130,25 +130,25 @@
 !==========================
 !==== FILES ===============
 !==========================
-      Character (Len=*), Parameter :: f_i_dp_pos = 'small_dp_I_Maple.txt'
-      Character (Len=*), Parameter :: f_i_dp_neg = 'small_dp_I_Maple_negnu.txt'
-      Character (Len=*), Parameter :: f_i_qp_pos = 'small_qp_I_Maple.txt'
-      Character (Len=*), Parameter :: f_i_qp_neg = 'small_qp_I_Maple_negnu.txt'
+      Character (Len=*), Parameter :: f_i_dp_pos = 'data/small_dp_I_Maple.txt'
+      Character (Len=*), Parameter :: f_i_dp_neg = 'data/small_dp_I_Maple_negnu.txt'
+      Character (Len=*), Parameter :: f_i_qp_pos = 'data/small_qp_I_Maple.txt'
+      Character (Len=*), Parameter :: f_i_qp_neg = 'data/small_qp_I_Maple_negnu.txt'
 
-      Character (Len=*), Parameter :: f_j_dp_pos = 'small_dp_J_Maple.txt'
-      Character (Len=*), Parameter :: f_j_dp_neg = 'small_dp_J_Maple_negnu.txt'
-      Character (Len=*), Parameter :: f_j_qp_pos = 'small_qp_J_Maple.txt'
-      Character (Len=*), Parameter :: f_j_qp_neg = 'small_qp_J_Maple_negnu.txt'
+      Character (Len=*), Parameter :: f_j_dp_pos = 'data/small_dp_J_Maple.txt'
+      Character (Len=*), Parameter :: f_j_dp_neg = 'data/small_dp_J_Maple_negnu.txt'
+      Character (Len=*), Parameter :: f_j_qp_pos = 'data/small_qp_J_Maple.txt'
+      Character (Len=*), Parameter :: f_j_qp_neg = 'data/small_qp_J_Maple_negnu.txt'
 
-      Character (Len=*), Parameter :: f_k_dp_pos = 'small_dp_K_Maple.txt'
-      Character (Len=*), Parameter :: f_k_dp_neg = 'small_dp_K_Maple_negnu.txt'
-      Character (Len=*), Parameter :: f_k_qp_pos = 'small_qp_K_Maple.txt'
-      Character (Len=*), Parameter :: f_k_qp_neg = 'small_qp_K_Maple_negnu.txt'
+      Character (Len=*), Parameter :: f_k_dp_pos = 'data/small_dp_K_Maple.txt'
+      Character (Len=*), Parameter :: f_k_dp_neg = 'data/small_dp_K_Maple_negnu.txt'
+      Character (Len=*), Parameter :: f_k_qp_pos = 'data/small_qp_K_Maple.txt'
+      Character (Len=*), Parameter :: f_k_qp_neg = 'data/small_qp_K_Maple_negnu.txt'
 
-      Character (Len=*), Parameter :: f_y_dp_pos = 'small_dp_Y_Maple.txt'
-      Character (Len=*), Parameter :: f_y_dp_neg = 'small_dp_Y_Maple_negnu.txt'
-      Character (Len=*), Parameter :: f_y_qp_pos = 'small_qp_Y_Maple.txt'
-      Character (Len=*), Parameter :: f_y_qp_neg = 'small_qp_Y_Maple_negnu.txt'
+      Character (Len=*), Parameter :: f_y_dp_pos = 'data/small_dp_Y_Maple.txt'
+      Character (Len=*), Parameter :: f_y_dp_neg = 'data/small_dp_Y_Maple_negnu.txt'
+      Character (Len=*), Parameter :: f_y_qp_pos = 'data/small_qp_Y_Maple.txt'
+      Character (Len=*), Parameter :: f_y_qp_neg = 'data/small_qp_Y_Maple_negnu.txt'
 
       Character (Len=*), Parameter :: acc_out_dp_i = 'dp_acc_cmp_I.txt'
       Character (Len=*), Parameter :: acc_out_qp_i = 'qp_acc_cmp_I.txt'
