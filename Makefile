@@ -5,23 +5,28 @@
 #   make clean
 #
 # This Makefile builds:
-#   bessel_driver1
+#   tests/bessel_driver1
 #
 # Main source expected:
-#   bessel_driver1.f90
+#   tests/bessel_driver1.f90
 #
 # Required supporting sources (adjust names if needed):
-#   set_rk.f90
-#   Cbessel_miller.f90
-#   mod_zbes.f90
-#   Bessel_Cmplx.f90
+#   src/parameters.f90
+#   src/set_rk.f90
+#   tests/Cbessel_miller.f90
+#   tests/mod_zbes.f90
+#   src/Bessel_Cmplx.f90
 
 # ============================================================
-# Remove command
+# Platform-specific
 # ============================================================
-RM = rm -f
-# For Windows CMD, you may use instead:
- #RM = del /f
+ifeq ($(OS),Windows_NT)
+	RM = del /f
+    EXE = .exe
+else
+	RM = rm -f
+    EXE =
+endif
 
 # ============================================================
 # Compiler selection
@@ -50,22 +55,21 @@ RM = rm -f
 
 # ---- GNU Fortran ----
 F90 = gfortran
-F90FLAGS = -O3
+F90FLAGS = -O3 -I src
 F90LINKFLAGS = -O3
 O = o
-EXEEXT = .exe
+MOD = mod
 
 # For debugging with gfortran, you may use:
 # F90 = gfortran
 # F90FLAGS = -O0 -g -fcheck=all -Wall -Wextra -fbacktrace
 # F90LINKFLAGS = -O0 -g -fcheck=all -Wall -Wextra -fbacktrace
 # O = o
-# EXEEXT = .exe
 
 # ============================================================
 # Target name
 # ============================================================
-TARGET = bessel_driver1$(EXEEXT)
+TARGET = tests/bessel_driver1$(EXEEXT)
 
 # ============================================================
 # Object files
@@ -74,11 +78,11 @@ TARGET = bessel_driver1$(EXEEXT)
 # replace Bessel_Cmplx.$(O) below by the correct object name.
 # ============================================================
 OBJS = \
-	set_rk.$(O) \
-	Cbessel_miller.$(O) \
-                  mod_zbes.$(O)\
-	Bessel_Cmplx.$(O) \
-	bessel_driver1.$(O)
+	src/set_rk.$(O) \
+	tests/Cbessel_miller.$(O) \
+    tests/mod_zbes.$(O)\
+	src/Bessel_Cmplx.$(O) \
+	tests/bessel_driver1.$(O)
 
 # ============================================================
 # Default target
@@ -100,16 +104,17 @@ $(TARGET): $(OBJS)
 # ============================================================
 # Explicit dependencies
 # ============================================================
-set_rk.$(O): set_rk.f90
-Cbessel_miller.$(O): Cbessel_miller.f90 set_rk.$(O)
-Cbessel.$(O): Cbessel.f90 set_rk.$(O)
-mod_zbes.$(O): mod_zbes.f90 set_rk.$(O)
-Bessel_Cmplx.$(O): Bessel_Cmplx.f90 set_rk.$(O) Cbessel_miller.$(O) 
+src/set_rk.$(O): src/set_rk.f90
+tests/Cbessel_miller.$(O): tests/Cbessel_miller.f90 src/set_rk.$(O)
+src/Cbessel.$(O): src/Cbessel.f90 src/set_rk.$(O)
+tests/mod_zbes.$(O): tests/mod_zbes.f90 src/set_rk.$(O)
+src/Bessel_Cmplx.$(O): src/Bessel_Cmplx.f90 src/parameters.f90 src/set_rk.$(O)
 
-bessel_driver1.$(O): bessel_driver1.f90 set_rk.$(O) Cbessel_miller.$(O)  Bessel_Cmplx.$(O)
+tests/bessel_driver1.$(O): tests/bessel_driver1.f90 src/parameters.f90 src/set_rk.$(O) tests/mod_zbes.$(O) tests/Cbessel_miller.$(O) src/Bessel_Cmplx.$(O)
 
-
-# Clean rule (Windows CMD)
 .PHONY: clean
 clean:
-	-del /f *.o *.mod *.exe 
+	-$(RM) $(TARGET) $(OBJS) *.mod
+
+check: $(TARGET)
+	(cd tests; ./bessel_driver1$(EXEEXT))
