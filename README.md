@@ -220,4 +220,4 @@ Department of Mathematics, Massachusetts Institute of Technology
 If you use this package in published work, please cite the corresponding paper, software repository, or documentation once.
 - Efficient Multi-Precision Computation of Bessel Functions for Real Orders and Complex Arguments with Fortran Implementation -- Part I: The Modified Bessel Function of the First Kind, I_nu(z)   https://arxiv.org/abs/2505.09770
 - Efficient Multi-Precision Computation of Bessel Functions for Real Orders and Complex Arguments with Fortran Implementation -- Part II: The Modified Bessel Function of the Second Kind, K_nu(z)  https://arxiv.org/abs/2606.14839
-- Efficient Multi-Precision Computation of Bessel Functions for Real Orders and Complex Arguments with a Fortran Implementation -- Part III: Regular Bessel Functions of the First and Second Kinds  J_nu(z) and Y_nu(z)
+- Efficient Multi-Precision Computation of Bessel Functions for Real Orders and Complex Arguments with a Fortran Implementation -- Part III: Regular Bessel Functions of the First and Second Kinds  J_nu(z) and Y_nu(z) https://arxiv.org/abs/2606.14937
